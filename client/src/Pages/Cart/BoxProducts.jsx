@@ -4,10 +4,7 @@ import { baseURL, getProductById } from "../../configs/services";
 import { TRASH } from "./../../configs/icons";
 import { Spinner } from "react-bootstrap";
 import "./BoxProducts.css";
-<<<<<<< HEAD
 import format from "../../configs/formatCurency";
-=======
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
 function BoxProducts({ dataProduct }) {
   const [product, setProducts] = useState(null);
@@ -60,11 +57,7 @@ function BoxProducts({ dataProduct }) {
     saveCart();
   };
   return product ? (
-<<<<<<< HEAD
-    <div className="space-between" style={{marginBottom: 20}}>
-=======
-    <div className="space-between">
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
+    <div className="space-between" style={{ marginBottom: 20 }}>
       <div className="order-qty">
         <div>
           <img
@@ -73,15 +66,27 @@ function BoxProducts({ dataProduct }) {
             className="img-products"
           />
         </div>
-<<<<<<< HEAD
-        <div className="set-cart" style={{display: 'flex', justifyContent: 'space-between', width: 700, alignItems: 'center'}} >
+        <div
+          className="set-cart"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: 700,
+            alignItems: "center",
+          }}
+        >
           <div className="list-product">
             <h5 className="product-name">{product.name}</h5>
             <p className="price">{format(product.price * +dataProduct.qty)}</p>
           </div>
           <div className="right-side">
             <div className="set-qty">
-              <span className={`btn-count minus ${dataProduct.qty !== 1 ? "" : "disable"}`} onClick={dataProduct.qty !== 1 ? onDesc : null}>
+              <span
+                className={`btn-count minus ${
+                  dataProduct.qty !== 1 ? "" : "disable"
+                }`}
+                onClick={dataProduct.qty !== 1 ? onDesc : null}
+              >
                 -
               </span>
               <p className="value ">{dataProduct.qty}</p>
@@ -90,40 +95,20 @@ function BoxProducts({ dataProduct }) {
               </span>
             </div>
             <div className="trash">
-              <img src={TRASH} alt="remove" className="cursor" onClick={onRemove} />
+              <img
+                src={TRASH}
+                alt="remove"
+                className="cursor"
+                onClick={onRemove}
+              />
             </div>
           </div>
         </div>
       </div>
-=======
-        <div className="list-product">
-          <h5 className="product-name">{product.name}</h5>
-          <div className="set-qty">
-            <span className="btn-count minus" onClick={onDesc}>
-              -
-            </span>
-            <p className="value ">{dataProduct.qty}</p>
-            <span className="btn-count plus" onClick={onAdd}>
-              +
-            </span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p className="price">Rp. {product.price * +dataProduct.qty}</p>
-        <div className="trash">
-          <img src={TRASH} alt="remove" className="cursor" onClick={onRemove} />
-        </div>
-      </div>
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     </div>
   ) : (
     <>
       <Spinner animation="border" size="sm" />
-<<<<<<< HEAD
-=======
-      <span className="sr-only">Loading...</span>
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       <Spinner animation="border" />
       <Spinner animation="grow" size="sm" />
       <Spinner animation="grow" />

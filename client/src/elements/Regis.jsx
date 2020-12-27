@@ -1,29 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-<<<<<<< HEAD
 import { Modal } from "react-bootstrap";
 import { register } from "../configs/services";
 import "./Login.css";
 
 function ModalRegister({ show, setShow, switchModal, dispatch }) {
-=======
-import { Modal, Overlay, Popover  } from "react-bootstrap";
-import { register } from "../configs/services";
-import "./Login.css";
-
-function ModalRegister({ show, setShow, onHide, switchModal, dispatch }) {
- 
-const [showPopup, setShowPopup] = useState(false);
-useEffect(() => {
-    if (showPopup === true) {
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
-    }
-  }, [showPopup]);
-const [target, setTarget] = useState(null);
-const ref = useRef(null);
-
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -49,20 +29,11 @@ const ref = useRef(null);
   const onRegister = (e) => {
     e.preventDefault();
     register(dispatch, formData, seterrRegis);
-<<<<<<< HEAD
-=======
-    setShowPopup(!showPopup)
-    setTarget(e.target)
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     console.log(onRegister);
   };
   const handleClose = () => setShow(false);
 
   return (
-<<<<<<< HEAD
-=======
-    <>
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     <Modal
       backdrop="static"
       centered
@@ -99,7 +70,6 @@ const ref = useRef(null);
             onChange={(e) => handleChange(e)}
             value={formData.fullName}
           />
-<<<<<<< HEAD
           {errRegis && (
             <p style={{ color: "red" }}>
               Invalid Register. Please check your form
@@ -109,13 +79,6 @@ const ref = useRef(null);
             REGISTER
           </button>
 
-=======
-          {errRegis && <p style={{ color: "red" }}>Email Already Exist</p>}
-          <button className="btn-login" onClick={onRegister}>
-            REGISTER
-          </button>
-          
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
           <p className="switch">
             Already have an account ? Klik{" "}
             <b className="b" onClick={onSwitch}>
@@ -125,24 +88,6 @@ const ref = useRef(null);
         </div>
       </Modal.Body>
     </Modal>
-<<<<<<< HEAD
-=======
-    <Overlay
-        show={showPopup}
-        target={target}
-        placement="top"
-        container={ref.current}
-        containerPadding={20}
-      >
-        <Popover id="popover-contained">
-          
-          <Popover.Content>
-            <strong>Please Input Detail</strong> 
-          </Popover.Content>
-        </Popover>
-      </Overlay>
-      </>
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   );
 }
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .profile-section-wrapper {
   display: flex;
   padding: 40px;
@@ -12,39 +11,23 @@
   margin-bottom: 28px;
 }
 
-.profile-section-wrapper 
-.box-profile 
-.detail-profile {
+.profile-section-wrapper .box-profile .detail-profile {
   display: flex;
 }
-.profile-section-wrapper 
-.box-profile 
-.detail-profile
-.pict {
+.profile-section-wrapper .box-profile .detail-profile .pict {
   margin-right: 24px;
   border-radius: 8px;
 }
 
-.profile-section-wrapper 
-.box-profile 
-.detail-profile
-.profile-data {
+.profile-section-wrapper .box-profile .detail-profile .profile-data {
   margin-top: 10px;
 }
 
-.profile-section-wrapper 
-.box-profile 
-.detail-profile
-.profile-data
-.sub-title {
+.profile-section-wrapper .box-profile .detail-profile .profile-data .sub-title {
   font-weight: bold;
-  color: #613D2B;
+  color: #613d2b;
 }
-.profile-section-wrapper 
-.box-profile 
-.detail-profile
-.profile-data
-.sub-value {
+.profile-section-wrapper .box-profile .detail-profile .profile-data .sub-value {
   color: #000;
 }
 
@@ -52,147 +35,14 @@
   width: 50%;
 }
 
-.profile-section-wrapper 
-.profile-page-width-con-right
-.profile-page-title {
+.profile-section-wrapper .profile-page-width-con-right .profile-page-title {
   margin-bottom: 24px;
 }
 
-.profile-section-wrapper 
-.profile-page-width-con-right
-.trans {
+.profile-section-wrapper .profile-page-width-con-right .trans {
   overflow: auto;
   height: 525px;
   padding: 16px;
   background-color: #eee;
   border-radius: 8px;
 }
-=======
-.page-profile {
-  position: relative;
-  background: #ffffff;
-}
-
-.box-profile {
-  position: absolute;
-  width: 350px;
-  height: 280px;
-  left: 195px;
-  top: 157px;
-}
-
-.pict {
-  position: absolute;
-  width: 180px;
-  height: 221.79px;
-
-  top: 59px;
-
-  background-blend-mode: normal;
-}
-
-.profile-title {
-  position: absolute;
-  max-width: 400px;
-  height: 33px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 33px;
-
-  color: #613d2b;
-}
-
-.box-transaksi {
-  width: 524px;
-  left: 720px;
-  background: #f6e6da;
-}
-
-.full-name {
-  position: absolute;
-  width: 150px;
-  height: 25px;
-  left: 208px;
-  top: 60px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 25px;
-  /* identical to box height */
-
-  color: #613d2b;
-}
-
-.p-name {
-  position: absolute;
-  width: 150px;
-  height: 25px;
-  left: 208px;
-  top: 86px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  /* identical to box height */
-
-  color: #000000;
-}
-
-.full-mail {
-  position: absolute;
-  width: 150px;
-  height: 25px;
-  left: 208px;
-  top: 146px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 25px;
-  /* identical to box height */
-
-  color: #613d2b;
-}
-
-.p-mail {
-  /* radifgans@gmail.com */
-
-  position: absolute;
-  width: 200px;
-  height: 25px;
-  left: 208px;
-  top: 170px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  /* identical to box height */
-
-  color: #000000;
-}
-
-.profile-page-width-con-right {
-  width: 524px;
-  margin-top: 100px;
-  margin-left: 700px;
-}
-.profile-page-title {
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 33px;
-  color: #613d2b;
-}
-.trans {
-  margin-top: auto;
-}
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb

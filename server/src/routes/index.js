@@ -41,11 +41,7 @@ router.get("/users", auth, isAdmin, getUsers);
 // router.get("/user/:id", auth, getSingleUserById);
 router.delete("/user/:id", auth, isAdmin, deleteUser);
 router.post("/user-restore/:id", auth, isAdmin, restoreUser);
-<<<<<<< HEAD
 router.get("/my-profile", auth, getProfile);
-=======
-router.get("/user/my-profile", auth, getProfile);
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
 //Products
 const {

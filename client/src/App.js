@@ -29,7 +29,6 @@ function App() {
     });
   }, [dispatch]);
   return (
-<<<<<<< HEAD
     <div className="main-container">
       <Router>
         {loading ? (
@@ -52,28 +51,6 @@ function App() {
         )}
       </Router>
     </div>
-=======
-    <Router>
-      {loading ? (
-        <div>
-          <Spinner animation="border" size="sm" />
-          <Spinner animation="border" />
-          <Spinner animation="grow" size="sm" />
-          <Spinner animation="grow" />
-        </div>
-      ) : (
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/detail/:id" component={Detail} />
-          <PrivateRoute exact path="/ship" component={Ship} />
-          <PrivateRoute exact path="/cart" component={Cart} />
-          <PrivateRoute exact path="/profile" component={Profile} />
-          <AdminRoute exact path="/add" component={Add} />
-          <AdminRoute exact path="/income" component={Income} />
-        </Switch>
-      )}
-    </Router>
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   );
 }
 

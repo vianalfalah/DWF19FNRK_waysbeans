@@ -16,21 +16,13 @@ function ModalLogin({ show, setShow, switchModal, dispatch, onHide }) {
     if (errLogin === true) {
       setTimeout(() => {
         seterrLogin(false);
-<<<<<<< HEAD
       }, 5000);
-=======
-      }, 6000);
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     }
   }, [errLogin]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   const onLogin = (e) => {
     e.preventDefault();
     login(
@@ -73,13 +65,7 @@ function ModalLogin({ show, setShow, switchModal, dispatch, onHide }) {
             onChange={(e) => handleChange(e)}
             value={formData.password}
           />
-<<<<<<< HEAD
           {errLogin && <p style={{ color: "red" }}>Invalid Login</p>}
-=======
-          {errLogin && (
-            <p style={{ color: "red" }}>Wrong username or password</p>
-          )}
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
           <button className="btn-login" onClick={onLogin}>
             LOGIN
           </button>

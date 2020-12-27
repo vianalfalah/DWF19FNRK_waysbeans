@@ -8,10 +8,7 @@ exports.getProducts = async (req, res) => {
       attributes: {
         exclude: ["createdAt", "updatedAt", "deletedAt"],
       },
-<<<<<<< HEAD
-      order: [["createdAt", "DESC"]]
-=======
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
+      order: [["createdAt", "DESC"]],
     });
 
     if (!products) {
@@ -126,7 +123,6 @@ exports.updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req.body;
-<<<<<<< HEAD
     const schema = Joi.object({
       name: Joi.string().min(2),
       price: Joi.number().min(1000),
@@ -136,8 +132,6 @@ exports.updateProduct = async (req, res) => {
     const { error } = schema.validate(body, {
       abortEarly: false,
     });
-=======
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
     const getProductById = await Product.findOne({
       where: {

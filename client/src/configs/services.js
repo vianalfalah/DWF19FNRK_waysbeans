@@ -6,17 +6,11 @@ export const baseURL = "http://localhost:5000/uploads/";
 export const login = async (dispatch, body, seterrLogin) => {
   try {
     const response = await API.post("/login", body);
-<<<<<<< HEAD
     await setAuthToken(response.data.data.token);
     localStorage.setItem("token", response.data.data.token);
 
     const getProfile = await API.get("/my-profile");
     localStorage.setItem("profile", JSON.stringify(getProfile.data.data));
-=======
-    setAuthToken(response.data.data.token);
-    localStorage.setItem("token", response.data.data.token);
-    const getProfile = await API.get("/user/my-profile");
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     dispatch({
       type: "LOGIN",
       payload: { ...getProfile.data.data },
@@ -34,14 +28,9 @@ export const register = async (dispatch, body, seterrRegis) => {
     console.log(response.data.data.token);
     setAuthToken(response.data.data.token);
     localStorage.setItem("token", response.data.data.token);
-<<<<<<< HEAD
     const getProfile = await API.get("/my-profile");
     localStorage.setItem("profile", JSON.stringify(getProfile.data.data));
 
-=======
-    const getProfile = await API.get("/user/my-profile");
-    console.log(getProfile);
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     dispatch({
       type: "LOGIN",
       payload: { ...getProfile.data.data.profile },
@@ -59,11 +48,7 @@ export const loadedService = async (dispatch) => {
       return null;
     }
     setAuthToken(token);
-<<<<<<< HEAD
     const getProfile = await API.get("/my-profile");
-=======
-    const getProfile = await API.get("/user/my-profile");
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     dispatch({
       type: "LOADED",
       payload: { ...getProfile.data.data },
@@ -75,11 +60,8 @@ export const loadedService = async (dispatch) => {
 
 export const logoutService = (dispatch) => {
   localStorage.removeItem("token");
-<<<<<<< HEAD
   localStorage.removeItem("profile");
   localStorage.removeItem("cart");
-=======
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   setAuthToken();
   dispatch({
     type: "LOGOUT",

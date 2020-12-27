@@ -26,11 +26,7 @@ function ModalAdd(props) {
 }
 
 function AddProduct() {
-<<<<<<< HEAD
   const [modalShow, setModalShow] = useState(false);
-=======
-  const [modalShow, setModalShow] = React.useState(false);
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   const [nameFile, setNameFile] = useState("Photo Product");
   const [formData, setFormData] = useState({});
   const router = useHistory();
@@ -75,19 +71,11 @@ function AddProduct() {
   const redirect = () => {
     router.push("/");
   };
-<<<<<<< HEAD
   const [file, setFile] = useState(null);
 
   const fileHandler = (e) => {
     setFile(e.target.files[0]);
   };
-=======
-   const [file, setFile] = React.useState(null)
-    
-    const fileHandler = (e) => {
-        setFile(e.target.files[0])
-    }
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
   return (
     <div className="page-add">
@@ -138,7 +126,6 @@ function AddProduct() {
               onChange={(e) => {
                 handleChange(e);
                 onUpload(e);
-<<<<<<< HEAD
                 fileHandler(e);
               }}
             />
@@ -148,13 +135,6 @@ function AddProduct() {
             src={file ? URL.createObjectURL(file) : null}
             alt={file ? file.name : null}
           />
-=======
-              fileHandler(e)
-              }}
-            />
-          </label>
-          <img className="img-add" src={file? URL.createObjectURL(file) : null} alt={file? file.name : null} />
->>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
           <Button className="btn-add" onClick={(e) => handleButton(e)}>
             <b style={{ fontFamily: "Poppins" }}>Add Product</b>
           </Button>
