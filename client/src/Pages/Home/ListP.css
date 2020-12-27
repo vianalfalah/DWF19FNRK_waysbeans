@@ -4,9 +4,15 @@
 .c-list-card {
   width: 241px;
   height: 410px;
+<<<<<<< HEAD
   max-width: 241px;
   background: #f7e6da;
   margin-bottom: 24px;
+=======
+  top: 42px;
+  max-width: 241px;
+  background: #f7e6da;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 .c-list-card-img {
   position: relative;
@@ -34,7 +40,11 @@
 
   top: 362px;
 
+<<<<<<< HEAD
   font-family: Poppins;
+=======
+  font-family: Avenir;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

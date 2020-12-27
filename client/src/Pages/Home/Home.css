@@ -1,5 +1,6 @@
 .page-home {
   position: relative;
+<<<<<<< HEAD
   /* width: 1440px;
   height: 1023px; */
   background: #ffffff;
@@ -9,15 +10,37 @@
   height: 1023px;
   margin: auto;
   margin-bottom: 42px;
+=======
+  width: 1440px;
+  height: 1023px;
+
+  background: #ffffff;
+}
+.jumbotron {
+  position: relative;
+  width: 1048px;
+  height: 1023px;
+  left: 196px;
+  top: 40px;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 
 .back1 {
   position: relative;
+<<<<<<< HEAD
   width: 980px;
   height: 400px;
   margin-top: 164px;
   background: #dbb699;
   margin-left: 236px;
+=======
+  width: 958px;
+  height: 400px;
+  left: 196px;
+  top: 120px;
+
+  background: #dbb699;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 
 .back2 {
@@ -90,6 +113,7 @@
   top: 272.1px;
   left: 523px;
 }
+<<<<<<< HEAD
 
 .list-container .wrapper-list-product{
   display: flex;
@@ -98,3 +122,5 @@
   margin: auto;
   flex-wrap: wrap;
 }
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React, { Component } from "react";
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 import Header from "./../../elements/Header/Header";
 import "./Home.css";
 import waysLg from "./../../assets/ways-lg.svg";
@@ -7,7 +11,11 @@ import ListP from "./ListP";
 
 function Home() {
   return (
+<<<<<<< HEAD
     <>
+=======
+    <div>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       <Header />
       <div className="jumbotron back1">
         <span>
@@ -28,6 +36,7 @@ function Home() {
         </div>
       </div>
       <div
+<<<<<<< HEAD
         className="list-container"
         style={{
           marginBottom: "51px",
@@ -40,6 +49,15 @@ function Home() {
         </div>
       </div>
     </>
+=======
+        style={{ marginTop: "123px", marginBottom: "51px", marginLeft: 100 }}
+      >
+        <div className="d-flex justify-content-center">
+          <ListP />;
+        </div>
+      </div>
+    </div>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   );
 }
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const {
   User,
   Transaction,
@@ -5,6 +6,9 @@ const {
   TransToProd,
   Profile,
 } = require("../../models");
+=======
+const { User, Transaction, Product, TransToProd } = require("../../models");
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 const responSuccess = "Response Success";
 const Joi = require("joi");
 
@@ -14,7 +18,10 @@ exports.getTransactions = async (req, res) => {
       attributes: {
         exclude: ["createdAt", "updatedAt", "deletedAt", "UserId", "user"],
       },
+<<<<<<< HEAD
       order: [["createdAt", "DESC"]],
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       include: [
         {
           model: User,
@@ -41,7 +48,11 @@ exports.getTransactions = async (req, res) => {
       return res.status(400).send({
         status: "Users Emptty",
         data: {
+<<<<<<< HEAD
           transactions,
+=======
+          trans,
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         },
       });
     }
@@ -66,7 +77,11 @@ exports.getSingleTranById = async (req, res) => {
   try {
     const { id } = req.params;
 
+<<<<<<< HEAD
     const transactions = await Transaction.findOne({
+=======
+    const tran = await Transaction.findOne({
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       attributes: {
         exclude: ["createdAt", "updatedAt"],
       },
@@ -77,9 +92,12 @@ exports.getSingleTranById = async (req, res) => {
         {
           model: User,
           as: "user",
+<<<<<<< HEAD
           attributes: {
             exclude: ["createdAt", "updatedAt", "password"],
           },
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         },
         {
           model: Product,
@@ -96,13 +114,20 @@ exports.getSingleTranById = async (req, res) => {
       ],
     });
 
+<<<<<<< HEAD
     if (!transactions) {
       return res.status(404).send({
         status: `Transactions With id: ${id} Not Found`,
+=======
+    if (!tran) {
+      return res.status(404).send({
+        status: `User With id: ${id} Not Found`,
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         data: null,
       });
     }
 
+<<<<<<< HEAD
     const profile = await Profile.findOne({ where: { id } });
     if (!profile || profile.isAdmin === false) {
       return res.status(401).send({
@@ -117,6 +142,12 @@ exports.getSingleTranById = async (req, res) => {
       status: responSuccess,
       data: {
         transactions,
+=======
+    res.send({
+      status: responSuccess,
+      data: {
+        tran,
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       },
     });
   } catch (error) {
@@ -138,15 +169,24 @@ exports.addTran = async (req, res) => {
       pos: Joi.number().required(),
       phone: Joi.number().required(),
       address: Joi.string().min(5).required(),
+<<<<<<< HEAD
       products: Joi.string().required(),
       attachment: Joi.string().required(),
+=======
+      products: Joi.required(),
+      attachment: Joi.required(),
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     });
     const { error } = schema.validate(body, {
       abortEarly: false,
     });
 
     const { name, email, pos, phone, address, attachment, products } = req.body;
+<<<<<<< HEAD
 
+=======
+    const productsData = JSON.parse(products);
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     const { id: userID } = req.user;
     const transaction = await Transaction.create({
       name,
@@ -154,11 +194,18 @@ exports.addTran = async (req, res) => {
       pos,
       phone,
       address,
+<<<<<<< HEAD
       attachment: req.file.filename,
       status: "Waiting Approve",
       userID,
     });
     const productsData = JSON.parse(products);
+=======
+      attachment,
+      status: "Waiting Approve",
+      userID,
+    });
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     await Promise.all(
       productsData.map(async (product) => {
         const { id, orderQuantity } = product;
@@ -217,12 +264,16 @@ exports.updateTran = async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req;
+<<<<<<< HEAD
     const schema = Joi.object({
       status: Joi.string().min(4).required(),
     });
     const { error } = schema.validate(body, {
       abortEarly: false,
     });
+=======
+
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     const getTranById = await Transaction.findOne({
       where: {
         id,
@@ -231,12 +282,20 @@ exports.updateTran = async (req, res) => {
 
     if (!getTranById) {
       return res.status(404).send({
+<<<<<<< HEAD
         status: `Transactions With id: ${id} Not Found`,
+=======
+        status: `User With id: ${id} Not Found`,
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         data: null,
       });
     }
 
+<<<<<<< HEAD
     const transactions = await Transaction.update(body, {
+=======
+    const tran = await Transaction.update(body, {
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       where: {
         id,
       },
@@ -254,6 +313,7 @@ exports.updateTran = async (req, res) => {
             exclude: ["createdAt", "updatedAt"],
           },
         },
+<<<<<<< HEAD
         {
           model: Product,
           as: "products",
@@ -265,6 +325,8 @@ exports.updateTran = async (req, res) => {
             as: "orderQuantity",
           },
         },
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       ],
     });
 
@@ -298,7 +360,11 @@ exports.deleteTran = async (req, res) => {
 
     if (!getTranById) {
       return res.status(404).send({
+<<<<<<< HEAD
         status: `Transactions With id: ${id} Not Found`,
+=======
+        status: `User With id: ${id} Not Found`,
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         data: null,
       });
     }
@@ -361,9 +427,14 @@ exports.getMyTransaction = async (req, res) => {
     const transactions = await Transaction.findAll({
       where: { userId: id },
       attributes: {
+<<<<<<< HEAD
         exclude: ["updatedAt", "userId"],
       },
       order: [["createdAt", "DESC"]],
+=======
+        exclude: ["createdAt", "updatedAt", "userId"],
+      },
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       include: [
         {
           model: User,
@@ -387,14 +458,22 @@ exports.getMyTransaction = async (req, res) => {
     });
     if (transactions.length === 0) {
       return res.status(404).send({
+<<<<<<< HEAD
         status: `User With id: ${id} Not Have Transaction`,
+=======
+        status: `User With id: ${id} Not Found`,
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         data: null,
       });
     }
 
     res.send({
       status: "Success",
+<<<<<<< HEAD
       message: "Successfully get detail transaction",
+=======
+      message: "successfully get detail transaction",
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
       data: { transactions },
     });
   } catch (error) {

@@ -7,6 +7,7 @@ import userIcon from "../../assets/icon/userIcon.png";
 import ModalLogin from "../Login";
 import ModalRegister from "../Regis";
 import "./Header.css";
+<<<<<<< HEAD
 import {
   LOGO,
   CART,
@@ -15,6 +16,9 @@ import {
   ADD_PRODUCT,
   TRANSACTION,
 } from "./../../configs/icons";
+=======
+import { LOGO, CART, PROFILE, LOGOUT } from "./../../configs/icons";
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
 function Header() {
   const [state, dispatch] = useContext(Context);
@@ -76,12 +80,16 @@ const NotLogin = ({ dispatch, state }) => {
 
 const IsLogin = ({ dispatch, state }) => {
   const { carts } = state;
+<<<<<<< HEAD
   const [showDropdown, setShowDropdown] = useState(false);
 
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   const onLogout = (e) => {
     logoutService(dispatch);
   };
 
+<<<<<<< HEAD
   const _handleOpenDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -168,6 +176,75 @@ const IsLogin = ({ dispatch, state }) => {
           )}
         </div>
       </div>
+=======
+  return (
+    <>
+      <Link to="/cart">
+        {carts.length > 0 && (
+          <div className="num-product-cart">
+            <p>{carts.length}</p>
+          </div>
+        )}
+        <img src={CART} alt="cart" className="img-cart" />
+      </Link>
+
+      <div className="dropdown">
+        <img src={PROFILE} alt="user" className="img-profile dropbtn"></img>
+        <div className="dropdown-content">
+          <span>
+            <Link to="/profile">
+              <div className="roww">
+                <img
+                  src={userIcon}
+                  alt="profile-icon"
+                  className="dropdown-img-icon"
+                />
+                <p className="dropdown-text">Profile</p>
+              </div>
+            </Link>
+          </span>
+          {/* {state.user.isAdmin ? (
+            <>
+              <span>
+                <Link to="/admin">
+                  <div className="row align-center">
+                    <img
+                      src={PROFILE}
+                      alt="add-product-icon"
+                      className="dropdown-img-icon"
+                    />
+                    <p className="ml-19 dropdown-text">Admin</p>
+                  </div>
+                </Link>
+              </span>
+              <span>
+                <Link to="/admin/add-product">
+                  <div className="row align-center">
+                    <img
+                      src=""
+                      alt="add-product-icon"
+                      className="dropdown-img-icon"
+                    />
+                    <p className="ml-19 dropdown-text">Add Product</p>
+                  </div>
+                </Link>
+              </span>
+            </>
+          ) : null} */}
+          <span onClick={onLogout}>
+            <div className="row align-center">
+              <img
+                src={LOGOUT}
+                alt="logut-icon"
+                className="dropdown-img-icon"
+              />
+              <p className="dropdown-text">Logout</p>
+            </div>
+          </span>
+        </div>
+      </div>
+      <button onClick={onLogout}>Logout</button>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
     </>
   );
 };

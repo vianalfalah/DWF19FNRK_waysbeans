@@ -9,13 +9,23 @@
 .product-name {
   display: flex;
   justify-content: space-between;
+<<<<<<< HEAD
   /* width: 100%; */
+=======
+  width: 100%;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   color: #613d2b;
   font-weight: bold;
   font-size: 18px;
 }
 .price {
+<<<<<<< HEAD
   /* width: 200px; */
+=======
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   color: #613d2b;
   font-weight: bold;
   font-size: 18px;
@@ -25,6 +35,11 @@
   font-weight: bold;
   color: #613d2b;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  margin-left: 30px;
+  margin-right: 30px;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 .value {
   background-color: #f6e6da;
@@ -33,6 +48,7 @@
   border-radius: 5px;
   width: 42px;
 }
+<<<<<<< HEAD
 
 .set-qty {
   display: flex;
@@ -41,16 +57,33 @@
 
 .set-qty .value {
   margin: 0 10px;
+=======
+.plus {
+  margin-left: 0px;
+}
+.minus {
+  margin-right: 0px;
+}
+
+.set-qty {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 
 .trash {
   cursor: pointer;
+<<<<<<< HEAD
   user-select: none;
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 .disable {
   opacity: 0.5;
   cursor: not-allowed;
 }
+<<<<<<< HEAD
 
 .set-cart {
   display: flex;
@@ -68,3 +101,5 @@
   margin-left: 32px;
   width: 700px;
 }
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb

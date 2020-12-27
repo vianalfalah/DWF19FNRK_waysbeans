@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { editStatusTransaction } from "../../configs/services";
 import "./Table.css";
+<<<<<<< HEAD
 import {SUCCESS, UNSUCCESS} from "../../configs/icons"
 import SEND from "../../assets/icon/truck.svg";
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
 function TableIncome({ data, dispatch }) {
   return (
@@ -59,6 +62,7 @@ const Td = ({ data, index, dispatch }) => {
   return (
     <>
       <tr>
+<<<<<<< HEAD
         <td>{+index + 1}</td>
         <td>{data.name}</td>
         <td>{data.address}</td>
@@ -84,6 +88,29 @@ const Td = ({ data, index, dispatch }) => {
           ) : status === "On The Way" ? (
             <div className="item-center">
               <img src={SEND} className="send"></img>
+=======
+        <td style={{ backgroundColor: "red" }}>{+index + 1}</td>
+        <td style={{ backgroundColor: "green" }}>{data.name}</td>
+        <td style={{ backgroundColor: "blue" }}>{data.address}</td>
+        <td style={{ backgroundColor: "yellow" }}>{data.pos}</td>
+        <td style={{ backgroundColor: "yellow" }}>{data.phone}</td>
+  <td style={{ backgroundColor: "orange" }}>{products.name}</td>
+        <td>
+          {status === "Success" ? (
+            <p className="success">Succsess</p>
+          ) : status === "Waiting Approve" ? (
+            <p className="waiting-approve">Waiting Approve</p>
+          ) : status === "On The Way" ? (
+            <p className="text-on-the-way">On The Way</p>
+          ) : (
+            <p className="cancel">Cancel</p>
+          )}
+        </td>
+        <td>
+          {status === "Success" || status === "On The Way" ? (
+            <div className="item-center">
+              <i className="fas fa-check status-check"></i>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
             </div>
           ) : status === "Waiting Approve" ? (
             <div className="item-center">
@@ -102,7 +129,11 @@ const Td = ({ data, index, dispatch }) => {
             </div>
           ) : (
             <div className="item-center">
+<<<<<<< HEAD
               <img src={UNSUCCESS} className="fas fa-times status-cancel"></img>
+=======
+              <i className="fas fa-times status-cancel"></i>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
             </div>
           )}
         </td>

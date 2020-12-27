@@ -70,8 +70,13 @@
   position: absolute;
   width: 200px;
   height: 33px;
+<<<<<<< HEAD
   left: 850px;
   top: 390px;
+=======
+  left: 890px;
+  top: 350px;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
   font-family: Poppins;
   font-style: normal;
@@ -89,6 +94,7 @@
   height: 40px;
   left: 490px;
   top: 460px;
+<<<<<<< HEAD
   background-color: #613d2b;
   border: none;
   border-radius: 5px;
@@ -96,4 +102,10 @@
   padding: 8px 32px;
   font-weight: bold;
   transition: 0.2s ease-in-out;
+=======
+  color: white;
+  font-family: Poppins;
+  background: #613d2b;
+  border-radius: 5px;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }

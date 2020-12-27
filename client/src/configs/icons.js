@@ -10,9 +10,16 @@ import LOGOUT from "./../assets/icon/logout.svg";
 import SUCCESS from './../assets/icon/success.svg';
 import UNSUCCESS from './../assets/icon/unsuccess.svg';
 import TRASH from './../assets/icon/trash.svg';
+<<<<<<< HEAD
 import ADD_PRODUCT from './../assets/icon/add-product.svg';
 import TRANSACTION from './../assets/icon/transaction.svg';
 
 //PRODUCT IMAGE IMPORT
 
 export { LOGO, BIGLOGO, WAVES, TRASH, PROFILE, CART, PROFILE_DROPDOWN, LOGOUT, SUCCESS, UNSUCCESS, ADD_PRODUCT, TRANSACTION };
+=======
+
+//PRODUCT IMAGE IMPORT
+
+export { LOGO, BIGLOGO, WAVES, TRASH, PROFILE, CART, PROFILE_DROPDOWN, LOGOUT, SUCCESS, UNSUCCESS };
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb

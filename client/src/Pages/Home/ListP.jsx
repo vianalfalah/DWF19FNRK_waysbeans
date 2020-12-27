@@ -1,7 +1,10 @@
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 import format from "../../configs/formatCurency";
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 import { API } from "../../configs/api";
 import "./ListP.css";
 
@@ -48,7 +51,11 @@ const ListP = () => {
                   {product.name}
                 </Card.Text>
                 <Card.Text className="c-list-card-price">
+<<<<<<< HEAD
                   {format(product.price)}
+=======
+                  Rp. {product.price}
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
                 </Card.Text>
                 <Card.Text className="c-list-card-stock">
                   Stock : {product.stock}

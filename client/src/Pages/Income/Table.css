@@ -2,7 +2,10 @@
   width: 85vw;
   margin: auto;
   border: 2px solid #828282;
+<<<<<<< HEAD
   margin-bottom: 50px;
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 
 .table-income tr th {
@@ -63,8 +66,12 @@
   color: #e83939;
 }
 .on-the-way {
+<<<<<<< HEAD
   color: black;
   background-color: #00d1ff;
+=======
+  color: #00d1ff;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 .waiting-approve {
   color: #ff9900;
@@ -74,6 +81,9 @@
   justify-content: center;
   display: flex;
 }
+<<<<<<< HEAD
 .send {
   width: 50px;
 }
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb

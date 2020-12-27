@@ -4,7 +4,10 @@ import { Context } from "../../Context/Context";
 import Header from "../../elements/Header/Header";
 import "./Cart.css";
 import BoxProducts from "./BoxProducts";
+<<<<<<< HEAD
 import formatCurency from "../../configs/formatCurency";
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
 function Cart() {
   const [state, dispatch] = useContext(Context);
@@ -48,7 +51,11 @@ function Cart() {
             <hr />
             <div className="subtotal">
               <p>Subtotal</p>
+<<<<<<< HEAD
               <p>{formatCurency(totalCart.subtotal)}</p>
+=======
+              <p>{totalCart.subtotal}</p>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
             </div>
             <div className="total-qty">
               <p>Qty</p>
@@ -57,7 +64,11 @@ function Cart() {
             <hr />
             <div className="price-total">
               <p>Total</p>
+<<<<<<< HEAD
               <p>{formatCurency(totalCart.total)}</p>
+=======
+              <p>{totalCart.total}</p>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
             </div>
             <div className="wrapper-btn-checkout">
               {carts.length > 0 ? (

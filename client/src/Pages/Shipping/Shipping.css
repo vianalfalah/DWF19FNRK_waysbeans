@@ -1,7 +1,11 @@
 .page-ship {
   position: relative;
   width: 1440px;
+<<<<<<< HEAD
   
+=======
+  height: 807px;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 
   background: #ffffff;
 }
@@ -105,6 +109,7 @@
   border-radius: 5px;
 }
 
+<<<<<<< HEAD
 .form .box-product .btn-pay {
   position: absolute;
   width: 524px;
@@ -144,6 +149,27 @@
   padding: 16px;
   background-color: #fff;
   border-radius: 8px;
+=======
+.form .btn-pay {
+  position: absolute;
+  width: 524px;
+  height: 40px;
+  left: 720px;
+  top: 329px;
+
+  background: #613d2b;
+  border-radius: 5px;
+}
+
+.form .box-ship {
+  position: absolute;
+  width: 524px;
+  height: 145px;
+  left: 720px;
+  top: 157px;
+
+  background: #f6e6da;
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 }
 
 .form .box-ship .img-ship {

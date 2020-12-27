@@ -5,9 +5,12 @@ import { getProductById, baseURL } from "../../configs/services";
 import { useParams } from "react-router-dom";
 import ModalLogin from "../../elements/Login";
 import ModalRegister from "../../elements/Regis";
+<<<<<<< HEAD
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import format from "../../configs/formatCurency";
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
 import "./Detail.css";
 
 function DetailProduct() {
@@ -26,6 +29,7 @@ function DetailProduct() {
     })();
   }, [id]);
 
+<<<<<<< HEAD
   const notify = () =>
     toast.success("Success Add To Cart!", {
       position: "top-center",
@@ -37,6 +41,8 @@ function DetailProduct() {
       progress: undefined,
     });
 
+=======
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
   const onAdd = () => {
     if (state.isLogin) {
       dispatch({
@@ -66,6 +72,7 @@ function DetailProduct() {
           <p className="title">{product.name}</p>
           <p className="stock">Stock : {product.stock}</p>
           <p className="desc">{product.description}</p>
+<<<<<<< HEAD
           <p className="price">{format(product.price)}</p>
           <button className="add-cart" onClick={onAdd}>
             Add Cart
@@ -81,6 +88,12 @@ function DetailProduct() {
             draggable
             pauseOnHover
           />
+=======
+          <p className="price">Rp. {product.price}</p>
+          <button className="add-cart" onClick={onAdd}>
+            <p style={{ fontFamily: "Poppins" }}>Add Cart</p>
+          </button>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
         </div>
         <ModalLogin
           show={showLogin}

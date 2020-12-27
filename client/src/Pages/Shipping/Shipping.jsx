@@ -143,12 +143,17 @@ function Shipping() {
               onChange={(e) => handleChange(e)}
             />
           </label>
+<<<<<<< HEAD
           <div className="box-product">
             <div className="box-ship">
+=======
+          <div className="box-ship">
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
             {carts
               ? carts.map((product, index) => (
                   <ListBuy dataProduct={product} key={index} />
                 ))
+<<<<<<< HEAD
               : null}     
               
             </div>
@@ -157,6 +162,13 @@ function Shipping() {
               </Button>      
           </div>
           
+=======
+              : null}
+          </div>
+          <Button className="btn-pay" onClick={onPay}>
+            <b style={{ fontFamily: "Poppins" }}>Pay</b>
+          </Button>
+>>>>>>> e386c091abd7afc53b7bb62870e4a51f8588f0fb
           <ModalShip
             show={modalShow}
             setShow={setModalShow}
