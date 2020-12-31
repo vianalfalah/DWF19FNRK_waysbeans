@@ -42,6 +42,7 @@ function DetailProduct() {
       dispatch({
         type: "ADD_TO_CART",
         payload: { price: product.price, id },
+        notify,
       });
       dispatch({
         type: "SAVE_CART",
@@ -97,7 +98,16 @@ function DetailProduct() {
       </div>
     </>
   ) : (
-    <div>Product Tidak Ada</div>
+    <h1
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 300,
+      }}
+    >
+      Product Tidak Ada
+    </h1>
   );
 }
 

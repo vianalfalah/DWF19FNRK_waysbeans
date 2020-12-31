@@ -68,10 +68,11 @@ export const logoutService = (dispatch) => {
   });
 };
 
-export const getProducts = async () => {
+export const getProducts = async (cbSuccess) => {
   try {
     const products = await API.get("/products");
-    return products.data.data.products;
+    // return products.data.data.products;
+    cbSuccess(products.data.data.products);
   } catch (error) {
     console.log(error);
     return null;
@@ -129,7 +130,12 @@ export const addTransaction = (data, cbSuccess) => {
 };
 
 export const getMyTransactions = (setTransactions) => {
+  console.log("JALAN");
   API.get("/my-transactions")
-    .then((res) => setTransactions(res.data.data.transactions))
+    .then((res) => {
+      console.log(res);
+      setTransactions(res.data.data.transactions);
+      return res.data.data.transactions;
+    })
     .catch((err) => console.log(err));
 };

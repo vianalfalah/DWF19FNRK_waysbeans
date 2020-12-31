@@ -17,7 +17,7 @@
   height: 400px;
   margin-top: 164px;
   background: #dbb699;
-  margin-left: 236px;
+  margin-left: 156px;
 }
 
 .back2 {
@@ -97,4 +97,18 @@
   width: 85%;
   margin: auto;
   flex-wrap: wrap;
+}
+.list-container .btn-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+
+  font-family: Poppins;
+  font-weight: 500;
+  color: white;
+  background: #613d2b;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }

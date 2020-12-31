@@ -4,8 +4,13 @@ import waysLg from "./../../assets/ways-lg.svg";
 import backImg from "./../../assets/back-img.png";
 import waves from "./../../assets/waves.svg";
 import ListP from "./ListP";
+import { useHistory } from "react-router";
 
 function Home() {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push("/all-products");
+  };
   return (
     <>
       <Header />
@@ -37,6 +42,9 @@ function Home() {
       >
         <div className="wrapper-list-product">
           <ListP />
+          <button className="btn-all" onClick={handleClick}>
+            All Products
+          </button>
         </div>
       </div>
     </>

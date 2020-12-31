@@ -30,7 +30,7 @@ const ListP = () => {
 
   return (
     <>
-      {products.map((product) => (
+      {products.slice(0, 4).map((product) => (
         <Link
           to={`/detail/${product.id}`}
           key={product.id}
@@ -61,5 +61,4 @@ const ListP = () => {
     </>
   );
 };
-
 export default ListP;

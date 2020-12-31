@@ -11,9 +11,10 @@ import Cart from "./Pages/Cart/Cart";
 import Profile from "./Pages/Profile/Profile";
 import PrivateRoute from "./component/PrivateRoute";
 import AdminRoute from "./component/AdminRoute";
-
+import Header from "./elements/Header/Header";
 import { Context } from "./Context/Context";
 import { loadedService } from "./configs/services";
+import AllProducts from "./Pages/Home/AllProducts";
 
 function App() {
   const [state, dispatch] = useContext(Context);
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="main-container">
       <Router>
+        <Header />
         {loading ? (
           <div>
             <Spinner animation="border" size="sm" />
@@ -42,6 +44,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/detail/:id" component={Detail} />
+            <Route exact path="/all-products" component={AllProducts} />
             <PrivateRoute exact path="/ship" component={Ship} />
             <PrivateRoute exact path="/cart" component={Cart} />
             <PrivateRoute exact path="/profile" component={Profile} />

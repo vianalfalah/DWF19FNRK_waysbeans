@@ -9,7 +9,7 @@ import Moment from "react-moment";
 import "./ListBuy.css";
 import formatCurency from "../../configs/formatCurency";
 
-function ListBuy({ children, dataProduct, ready }) {
+function ListBuy({ children, dataProduct, ready, dataTransactions }) {
   const [product, setProducts] = useState(null);
   const [transactions, setTransactions] = useState([]);
   const [userData, setUserData] = useState({});
@@ -21,7 +21,7 @@ function ListBuy({ children, dataProduct, ready }) {
       (async () => {
         const data = await getProductById(dataProduct.id);
         setProducts(data.data.data.product);
-        await getMyTransactions(setTransactions);
+
         setUserData(JSON.parse(localStorage.getItem("profile")));
       })();
     }
@@ -30,6 +30,7 @@ function ListBuy({ children, dataProduct, ready }) {
   const date = new Date();
   return product ? (
     <div className="card-ship">
+      {console.log(transactions)}
       <div className="row">
         <div className="align-center">
           <img
@@ -40,7 +41,13 @@ function ListBuy({ children, dataProduct, ready }) {
         </div>
         <div className="ml-13">
           <h5 className="ship-name">{product.name}</h5>
-          <p className="ship-desc">{transactions.createdAt}</p>
+          <p className="ship-desc">
+            {window.location.pathname === "/profile" ? (
+              new Date(dataTransactions.createdAt).toUTCString()
+            ) : (
+              <Moment format="dddd, DD MMMM YYYY">{date}</Moment>
+            )}
+          </p>
           <div className="bon">
             <p className="ship-desc mt-21">
               Price : {formatCurency(product.price)}

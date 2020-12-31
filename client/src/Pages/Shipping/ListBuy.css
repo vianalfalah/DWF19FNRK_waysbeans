@@ -58,6 +58,9 @@
 .ship-logo {
   width: 73px;
   height: 22px;
+  position: absolute;
+  top: 15px;
+  right: 35px;
 }
 
 .qr-status {

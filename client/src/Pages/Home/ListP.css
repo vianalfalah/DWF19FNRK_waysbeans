@@ -58,3 +58,12 @@
 
   color: #974a4a;
 }
+
+.wrapper-list-product {
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}

@@ -132,7 +132,11 @@ function AddProduct() {
           </label>
           <img
             className="img-add"
-            src={file ? URL.createObjectURL(file) : null}
+            src={
+              file
+                ? URL.createObjectURL(file)
+                : "https://mapbyyou.com/maptool/dist/img/no-available.png"
+            }
             alt={file ? file.name : null}
           />
           <Button className="btn-add" onClick={(e) => handleButton(e)}>

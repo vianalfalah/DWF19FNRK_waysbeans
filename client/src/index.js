@@ -6,10 +6,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ContextProvider } from "./Context/Context";
 
-import store from "./redux/store/store.jsx";
-
 ReactDOM.render(
-  <ContextProvider store={store}>
+  <ContextProvider>
     <App />
   </ContextProvider>,
   document.getElementById("root")

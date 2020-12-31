@@ -3,7 +3,7 @@ import ListBuy from "../Shipping/ListBuy";
 import qr from "../../assets/qr.svg";
 import { useState } from "react";
 import { editStatusTransaction } from "../../configs/services";
-import { Modal } from "react-bootstrap";
+import { Col, Modal, Row } from "react-bootstrap";
 
 function Transaksi({ transaction }) {
   const [status, setStatus] = useState(transaction.status);
@@ -78,18 +78,29 @@ function Transaksi({ transaction }) {
 
   return (
     <div>
-      <div className="qr">
-        <img src={qr} alt="qr-code" />
-        <Status type={transaction.status} />
+      <div style={{ position: "relative" }}>
+        {transaction.products.length > 0 &&
+          transaction.products.map((product, index) => {
+            return (
+              <>
+                <ListBuy
+                  dataTransactions={transaction}
+                  dataProduct={product}
+                  key={index}
+                  ready={true}
+                />
+              </>
+            );
+          })}
+        <Col>
+          <Row>
+            <img src={qr} alt="qr-code" className="qr-logo" />
+          </Row>
+          <Row>
+            <Status type={transaction.status} />
+          </Row>
+        </Col>
       </div>
-      {transaction.products.length > 0 &&
-        transaction.products.map((product, index) => {
-          return (
-            <>
-              <ListBuy dataProduct={product} key={index} ready={true} />
-            </>
-          );
-        })}
       <div className="row">
         {status === "On The Way" && (
           <>
